@@ -70,10 +70,11 @@ function displayResults () {
   jQuery(".VC-question-panel").fadeOut(
     "slow",
     function() {
-      jQuery(".VC-results-name").text(candidateInfo[winningID].name)
+      jQuery(".VC-results-name").text(candidateInfo[winningID].name);
       jQuery(".VC-results-similarity").text(
-        voterSimilarities[0].percentage + "% similar"
+        "You are " + voterSimilarities[0].percentage + "% similar."
       );
+      jQuery(".VC-results-slogan").text(candidateInfo[winningID].slogan);
       jQuery(".VC-results-panel").fadeIn();
     }
   );
@@ -82,7 +83,7 @@ function displayResults () {
 function submitAnswer () {
   var selectedValue = jQuery("input[name='answer']:checked").val();
   if (!selectedValue) {
-    jQuery(".VC-alert").slideToggle().text("Pick an answer first.");
+    jQuery(".VC-alert").slideToggle().text("Pick an answer first");
     return false;
   } else {
     voterPosition.push(parseInt(selectedValue));
