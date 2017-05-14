@@ -7,23 +7,25 @@
 }
 .VC-question-number {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2rem;
 }
-.VC-question-body {
-  text-align: left;
-}
+.VC-question-body,
 .VC-question-options {
   text-align: left;
 }
+
 .VC-alert {
   display: none;
   font-size: 0.8rem;
   margin: 0.5rem;
   text-transform: uppercase;
 }
+
 .VC-results-interviews {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
 }
+
 .VC-button {
   display: inline-block;
   //height: 1rem;
