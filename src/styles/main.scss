@@ -1,2 +1,21 @@
 // Use this file to import your sass partials. For example:
 @import "vc";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.VC-wrapper {
+  background-color: #f5f5f5;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.1);
+  //border-radius: 1rem;
+  margin: auto;
+  width: 100%;
+  max-width: 450px;
+}
+.VC-panel {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
