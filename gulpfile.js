@@ -36,7 +36,8 @@ gulp.task('scripts', function() {
         exclude: 'node_modules/**',
         presets: [[ "es2015", { "modules": false } ]],
         plugins: ["external-helpers"]
-      })
+      }),
+      rollupUglify();
     ],
     format: 'iife'
   })
