@@ -4,6 +4,9 @@ import {
   questions
 } from './data';
 
+// Set up the responsive iframe
+var pymChild = new pym.Child();
+
 var voterPosition = [];
 var voterSimilarities = [];
 var currentQuestion = 0;
@@ -63,6 +66,7 @@ function goToQuestion(number) {
         option +
         "</input></p>");
     };
+    pymChild.sendHeight();
   };
 };
 
@@ -76,6 +80,7 @@ function displayResults () {
       );
       jQuery(".VC-results-slogan").text(candidateInfo[winningID].slogan);
       jQuery(".VC-results-panel").fadeIn();
+      pymChild.sendHeight();
     }
   );
 };
