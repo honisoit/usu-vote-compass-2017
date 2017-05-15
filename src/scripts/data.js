@@ -4,60 +4,70 @@ var candidateInfo = {
       "name": "Adam Torres",
       "slogan": "Up and Adam",
       "colour": "",
+      "faction": "National Labor Students (Labor Left)",
       "pageURL": "https://www.facebook.com/adamforboard/"
    },
    "2": {
       "name": "Alexander Shu",
       "slogan": "We want Shu",
       "colour": "",
+      "faction": "Independent",
       "pageURL": "https://www.facebook.com/WeWantShu/"
    },
    "3": {
       "name": "Caitlin McMenamin",
       "slogan": "Choose Caitie",
       "colour": "",
+      "faction": "Sydney Labor Students (Labor Left)",
       "pageURL": "https://www.facebook.com/ChooseCaitie/"
    },
    "4": {
       "name": "Claudia Gulbransen-Diaz",
       "slogan": "Harder, Better, Faster, Stronger",
       "colour": "",
+      "faction": "Student Unity (Labor Right)",
       "pageURL": "https://www.facebook.com/CLAUDIAforUSU/"
    },
    "5": {
       "name": "Erika Salmon",
       "slogan": "Upstream with Salmon",
       "colour": "",
+      "faction": "Independent Liberal",
       "pageURL": "https://www.facebook.com/UpstreamWithSalmon/"
    },
    "6": {
       "name": "Hengjie Sun",
       "slogan": "Hengjie Sun Get Things Done",
       "colour": "",
+      "faction": "Independent",
       "pageURL": "https://www.facebook.com/Hengjie-Sun-Get-things-done-Hengjie-For-USU-Board-1756389244672799/"
    },
    "7": {
       "name": "Jacob Masina",
       "slogan": "Team Jacob",
       "colour": "",
+      "faction": "Liberal",
       "pageURL": "https://www.facebook.com/TEAMJACOBFORUSU/"
    },
    "8": {
       "name": "Liliana Tai",
       "slogan": "Don't Be Silly, Vote For Lili",
       "colour": "",
+      "faction": "Independent",
       "pageURL": "https://www.facebook.com/Lili4USU/"
    },
    "9": {
       "name": "Sally Yang",
       "slogan": "Select Sally",
       "colour": "",
+      "faction": "Independent",
       "pageURL": "#"
    },
    "10": {
       "name": "Zhixian Wang",
       "slogan": "Yas Zhixian",
       "colour": "",
+      "faction": "Independent",
       "pageURL": "https://www.facebook.com/yaszhixianforusu"
    }
 }
@@ -101,7 +111,7 @@ var questions = [
    "options": {"The USU shouldn't pursue large chains":1, "It doesn't matter":3, "It should be a priority":4, "Large chains should be the top priority":5}
  },
  {
-   "question": "Should the USU should begin introducing more quotas for marginalised groups, like queer students or international students?",
+   "question": "Should the USU begin introducing more quotas for marginalised groups, like queer students or international students?",
    "options": {"Definitely not":1, "Probably not":2, "Neutral":3, "Probably":4, "Definitely":5}
  },
  {
