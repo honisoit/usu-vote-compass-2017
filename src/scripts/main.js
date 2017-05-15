@@ -6,12 +6,16 @@ import {
 
 // Set up the responsive iframe
 var pymChild = new pym.Child();
+pymChild.sendHeight();
 
 var voterPosition = [];
 var voterSimilarities = [];
 var currentQuestion = 0;
-var maximumDistance = 4 * Math.sqrt(10);
 var numberOfQuestions = questions.length;
+// Maximum distance is the longest diagonal of a hypercube. Sigh, I know.
+// You just want four times the square root of the number of questions
+// var maximumDistance = 4 * Math.sqrt(10);
+var maximumDistance = 12;
 var winningID;
 
 var calculateSimilarities = function calculateSimilarities () {
@@ -74,11 +78,19 @@ function displayResults () {
   jQuery(".VC-question-panel").fadeOut(
     "slow",
     function() {
+      const secondID = voterSimilarities[1].id;
+      const secondPercentage = voterSimilarities[1].percentage;
+      const secondName = candidateInfo[secondID].name;
+      const thirdID = voterSimilarities[2].id;
+      const thirdPercentage = voterSimilarities[2].percentage;
+      const thirdName = candidateInfo[thirdID].name;
       jQuery(".VC-results-name").text(candidateInfo[winningID].name);
       jQuery(".VC-results-similarity").text(
         "You are " + voterSimilarities[0].percentage + "% similar."
       );
-      jQuery(".VC-results-slogan").text(candidateInfo[winningID].slogan);
+      jQuery(".VC-results-slogan").text("Slogan: " + candidateInfo[winningID].slogan);
+      jQuery(".VC-results-faction").text("Factional allegiance: " + candidateInfo[winningID].faction);
+      jQuery(".VC-results-summary").text(`You were also close to ${secondName} (${secondPercentage}%) and ${thirdName} (${thirdPercentage}%).`);
       jQuery(".VC-results-panel").fadeIn();
       pymChild.sendHeight();
     }
@@ -89,10 +101,12 @@ function submitAnswer () {
   var selectedValue = jQuery("input[name='answer']:checked").val();
   if (!selectedValue) {
     jQuery(".VC-alert").slideToggle().text("Pick an answer first");
+    pymChild.sendHeight();
     return false;
   } else {
     voterPosition.push(parseInt(selectedValue));
     jQuery(".VC-alert").hide()
+    pymChild.sendHeight();
     currentQuestion = currentQuestion + 1;
     return goToQuestion(currentQuestion);
   };
